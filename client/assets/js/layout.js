@@ -4,11 +4,12 @@ const headerAccountEl = document.querySelector(".account-container .wrapper");
 const headerAccountDropdownEl = document.querySelector(".account-dropdown");
 
 // Toggle account dropdown
-headerAccountEl.addEventListener("click", () => {
+headerAccountEl.addEventListener("click", (e) => {
+  e.preventDefault();
   headerAccountDropdownEl.classList.toggle("hidden");
 });
 
-// Closes account dropdown when user clicks anywhere other than the account dropdown
+// Closes open menus when clicked on blank
 window.addEventListener("click", (e) => {
   const clicked = e.target;
   if (

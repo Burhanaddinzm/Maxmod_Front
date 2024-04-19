@@ -30,10 +30,10 @@
           <div class="account-cart">
             <!-- Account -->
             <div class="account-container">
-              <a href="#" class="wrapper">
+              <button class="wrapper">
                 <img src="./client/assets/icons/user_icon.svg" alt="" />
                 <span>Hello, sign in</span>
-              </a>
+              </button>
 
               <div class="account-dropdown hidden">
                 <ul>
@@ -63,13 +63,48 @@
             </div>
             <!-- Cart -->
             <div class="cart-container">
-              <a href="#" class="header-cart">
+              <button class="header-cart">
                 <div class="cart-icon">
                   <img src="./client/assets/icons/cart_icon.svg" alt="" />
                   <span>0</span>
                 </div>
-                <span class="header-cart-total">$15.00</span>
-              </a>
+                <span class="header-cart-total">$0.00</span>
+              </button>
+              <div class="cart-drawer">
+                <div class="drawer-top">
+                  <h3>Shopping cart (1)</h3>
+                  <button>
+                    <img src="./client/assets/icons/close_icon.svg" alt="" />
+                  </button>
+                </div>
+                <div class="line"></div>
+                <ul class="drawer-middle">
+                  <li class="product">
+                    <a href="#">
+                      <img
+                        src="./client/assets/images/product/product-1.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="product-detail">
+                      <a href="#">Lorem ipsum dolor sit amet consectetur.</a>
+                      <p>Weight: <span>500gm</span></p>
+                      <span>$19.00</span>
+                    </div>
+                    <div class="cart-control">
+                      <button>
+                        <img src="" alt="delete" />
+                      </button>
+                      <div class="count-control">
+                        <button id="decrease-btn">-</button>
+                        <input type="number" id="count-input" />
+                        <button id="increase-btn">+</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="overlay"></div>
             </div>
           </div>
         </div>
