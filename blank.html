@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./client/assets/css/layout.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./client/assets/icons/favicon.png"
+    />
+    <title>@ViewData["Title"]</title>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header>
+      <div class="container">
+        <div class="header-top">
+          <!-- Logo -->
+          <a href="#">
+            <h1 class="logo">Maxmod</h1>
+          </a>
+          <!-- Search -->
+          <form class="search" id="search-form">
+            <input placeholder="Search For Products..." type="text" />
+            <button class="btn" type="submit">Search</button>
+          </form>
+          <!-- Account-Cart -->
+          <div class="account-cart">
+            <!-- Account -->
+            <div class="account-container">
+              <a href="#" class="wrapper">
+                <img src="./client/assets/icons/user_icon.svg" alt="" />
+                <span>Hello, sign in</span>
+              </a>
+
+              <div class="account-dropdown hidden">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img src="./client/assets/icons/signin_icon.svg" alt="" />
+                      <span>Log In</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="./client/assets/icons/signup_icon.svg" alt="" />
+                      <span>Register</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="./client/assets/icons/signout_icon.svg"
+                        alt=""
+                      />
+                      <span>Log Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Cart -->
+            <div class="cart-container">
+              <a href="#" class="header-cart">
+                <div class="cart-icon">
+                  <img src="./client/assets/icons/cart_icon.svg" alt="" />
+                  <span>0</span>
+                </div>
+                <span class="header-cart-total">$15.00</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="line out-of-container"></div>
+        <div class="header-bottom">
+          <nav>
+            <ul>
+              <li class="active">
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Categories</a>
+              </li>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="line out-of-container"></div>
+      </div>
+    </header>
+    <main><!-- @RenderBody --></main>
+    <!-- Footer Start -->
+    <footer></footer>
+    <!-- Scripts -->
+    <script src="./client/assets/js/layout.js"></script>
+  </body>
+</html>

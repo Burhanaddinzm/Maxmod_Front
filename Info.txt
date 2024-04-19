@@ -1,0 +1,12 @@
+--------Pages--------		--------Models--------		URL: https://maxmod-theme.myshopify.com/
+	Home				Category
+	Shop				Vendor
+	Product				AppUser
+	Login/Register			Product
+	Cart				ProductImages
+	About				ProductSize
+	Contact				ProductWeight
+					Size
+					Weight
+					Settings
+					SliderSettings
