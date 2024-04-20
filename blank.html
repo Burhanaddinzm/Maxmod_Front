@@ -32,7 +32,7 @@
             <div class="account-container">
               <button class="wrapper">
                 <img src="./client/assets/icons/user_icon.svg" alt="" />
-                <span>Hello, sign in</span>
+                <span>Hello, log in</span>
               </button>
 
               <div class="account-dropdown hidden">
@@ -70,7 +70,7 @@
                 </div>
                 <span class="header-cart-total">$0.00</span>
               </button>
-              <div class="cart-drawer">
+              <div class="cart-drawer hidden">
                 <div class="drawer-top">
                   <h3>Shopping cart (1)</h3>
                   <button>
@@ -89,22 +89,36 @@
                     <div class="product-detail">
                       <a href="#">Lorem ipsum dolor sit amet consectetur.</a>
                       <p>Weight: <span>500gm</span></p>
-                      <span>$19.00</span>
+                      <span class="price">$19.00</span>
                     </div>
                     <div class="cart-control">
-                      <button>
-                        <img src="" alt="delete" />
+                      <button class="btn">
+                        <img
+                          src="./client/assets/icons/trashcan_icon.svg"
+                          alt=""
+                        />
                       </button>
                       <div class="count-control">
-                        <button id="decrease-btn">-</button>
-                        <input type="number" id="count-input" />
-                        <button id="increase-btn">+</button>
+                        <button class="decrease" id="decrease-btn">-</button>
+                        <input value="1" type="number" id="count-input" />
+                        <button class="increase" id="increase-btn">+</button>
                       </div>
                     </div>
                   </li>
                 </ul>
+                <div class="line"></div>
+                <div class="drawer-bottom">
+                  <div class="subtotal-container">
+                    <span>Subtotal (1)</span>
+                    <span class="subtotal">$19.00</span>
+                  </div>
+                  <div class="wrapper">
+                    <a class="btn" href="#">View Cart</a>
+                    <a class="btn" href="#">Checkout</a>
+                  </div>
+                </div>
               </div>
-              <div class="overlay"></div>
+              <div class="overlay hidden"></div>
             </div>
           </div>
         </div>
