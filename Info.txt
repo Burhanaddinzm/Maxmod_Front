@@ -9,4 +9,3 @@
 					Size
 					Weight
 					Settings
-					SliderSettings

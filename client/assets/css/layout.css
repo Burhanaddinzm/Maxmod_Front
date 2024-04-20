@@ -552,3 +552,78 @@ nav a {
 header nav a:hover {
   color: rgb(69, 145, 73);
 }
+
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #234925;
+  color: #fff;
+}
+
+footer h3 {
+  font-weight: 400;
+  cursor: default;
+  font-size: 24px;
+}
+
+footer img {
+  width: 19px;
+  height: 24px;
+  object-fit: contain;
+}
+
+footer a,
+footer p {
+  color: #fff;
+  font-weight: 300;
+  transition: opacity 0.2s ease-in-out;
+}
+
+footer a:hover {
+  opacity: 0.7;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 24px;
+}
+
+footer .line {
+  margin-top: 14px;
+}
+
+footer nav ul {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+footer nav ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+footer nav ul ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+}
+
+footer nav ul li ul li {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+}
+
+footer .copyright {
+  text-align: center;
+  padding-bottom: 14px;
+  padding-top: 4px;
+}
