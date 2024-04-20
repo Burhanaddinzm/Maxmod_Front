@@ -10,6 +10,22 @@ const cartDrawerCloseBtn = document.querySelector(
   ".cart-container .drawer-top button"
 );
 
+const headerCategoriesEl = document.querySelector(".header-bottom .categories");
+const headerCategoriesChevron = document.querySelector(
+  ".header-bottom .categories img"
+);
+const headerCategoriesDropdown = document.querySelector(
+  ".header-bottom .categories .nav-dropdown"
+);
+
+//Toggle header categories dropdown
+headerCategoriesEl.addEventListener("click", (e) => {
+  if (!e.target.closest(".nav-dropdown")) {
+    headerCategoriesDropdown.classList.toggle("hidden");
+    headerCategoriesChevron.classList.toggle("inverted");
+  }
+});
+
 // Open drawer on cart click
 headerCartEl.addEventListener("click", () => {
   cartDrawerEl.classList.remove("hidden");
@@ -32,11 +48,20 @@ headerAccountEl.addEventListener("click", (e) => {
 
 window.addEventListener("click", (e) => {
   const clicked = e.target;
-  // Closes header dropdown when clicked on blank
+  // Closes header dropdown when clicked on empty space
   if (
     !headerAccountEl.contains(clicked) &&
     !headerAccountDropdownEl.classList.contains("hidden")
   ) {
     headerAccountDropdownEl.classList.add("hidden");
+  }
+
+  //Closes header categories dropdown when clicked on empty space
+  if (
+    !headerCategoriesEl.contains(clicked) &&
+    !headerCategoriesDropdown.classList.contains("hidden")
+  ) {
+    headerCategoriesDropdown.classList.add("hidden");
+    headerCategoriesChevron.classList.remove("inverted");
   }
 });

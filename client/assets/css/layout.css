@@ -91,6 +91,10 @@ body {
   color: #000 !important;
 }
 
+.inverted {
+  transform: rotate(180deg);
+}
+
 .logo {
   font-family: "Abel", sans-serif;
   font-weight: 900;
@@ -216,7 +220,8 @@ header .header-top {
   position: absolute;
   left: -50px;
   top: 40px;
-  animation: animateAccountDropdown 0.2s;
+  animation: animateDropdown 0.2s;
+  z-index: 1000;
 }
 
 .account-container .account-dropdown ul {
@@ -251,7 +256,7 @@ header .header-top {
   object-fit: contain;
 }
 
-@keyframes animateAccountDropdown {
+@keyframes animateDropdown {
   0% {
     opacity: 0;
     transform: translateY(-1.5rem);
@@ -493,6 +498,42 @@ header .header-top {
 
 .header-bottom {
   padding: 12px 0;
+  position: relative;
+}
+
+.header-bottom .categories a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-bottom .categories img {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+.header-bottom nav .nav-dropdown {
+  position: absolute;
+  top: 50px;
+  width: 100vw;
+  margin-left: calc(44% - 50vw);
+  background-color: #fff;
+  animation: animateDropdown 0.2s;
+}
+
+.header-bottom nav .nav-dropdown ul {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  padding: 12px 0;
+}
+
+.header-bottom nav .nav-dropdown .children {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 header nav ul {
