@@ -57,6 +57,7 @@ button {
 
 html {
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -480,7 +481,7 @@ header .left-side .burger-menu.open .bar:nth-child(3) {
 .drawer-middle .product .product-detail a {
   font-size: 16px;
   font-weight: 400;
-  columns: #000;
+  color: #000;
   transition: color 0.15s ease-in-out;
 }
 
@@ -679,6 +680,32 @@ footer .copyright {
   padding-top: 4px;
 }
 
+footer .back-to-top {
+  border: 1px solid #000;
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 25px;
+  bottom: 40px;
+  display: none;
+}
+
+footer .back-to-top img {
+  transform: rotate(180deg) translateY(-2px);
+  transition: filter 0.2s ease-in-out;
+  width: 15px;
+  height: 15px;
+}
+
+footer .back-to-top.halfway img {
+  filter: invert(100%) sepia(3%) saturate(2%) hue-rotate(89deg) brightness(114%)
+    contrast(100%);
+}
+
 @media screen and (max-width: 1280px) {
   .header-top .search input {
     width: 40vw;
@@ -809,6 +836,10 @@ footer .copyright {
   footer p {
     font-size: 12px;
     font-weight: 300;
+  }
+
+  footer .copyright {
+    font-size: 12px;
   }
 }
 

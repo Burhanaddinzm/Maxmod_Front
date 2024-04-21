@@ -21,7 +21,14 @@ const headerCategoriesDropdown = document.querySelector(
 const burgerMenuEl = document.querySelector(".burger-menu");
 const headerBottomEl = document.querySelector(".header-bottom");
 
+const backToTopBtn = document.querySelector("footer .back-to-top");
+
 let windowWidth = window.innerWidth;
+
+//Captures window width on window resize
+window.addEventListener("resize", () => {
+  windowWidth = window.innerWidth;
+});
 
 //Toggles header navigation
 burgerMenuEl.addEventListener("click", () => {
@@ -85,3 +92,49 @@ window.addEventListener("click", (e) => {
     headerBottomEl.style.display = "";
   }
 });
+
+// Calculate the percentage of scroll distance
+const calculateScrollPercentage = () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight;
+  const clientHeight = document.documentElement.clientHeight;
+
+  const scrollDistance = scrollHeight - clientHeight;
+
+  if (scrollDistance === 0) {
+    return 0;
+  }
+
+  const scrollPercentage = (scrollTop / scrollDistance) * 100;
+
+  return scrollPercentage;
+};
+
+// When the user scrolls down 10% from the top of the document, show the button
+window.addEventListener("scroll", () => {
+  const scrollPercentage = calculateScrollPercentage();
+
+  if (scrollPercentage >= 10) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+
+  if (scrollPercentage >= 50) {
+    backToTopBtn.classList.add("halfway");
+  } else {
+    backToTopBtn.classList.remove("halfway");
+  }
+
+  backToTopBtn.style.background = `linear-gradient(to top, rgb(0, 0, 0) ${Math.round(
+    scrollPercentage
+  )}%, rgb(255, 255, 255) ${Math.round(scrollPercentage)}%)`;
+});
+
+// When the user clicks on the button, scroll to the top of the document
+const scrollToTop = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+
+backToTopBtn.addEventListener("click", scrollToTop);
