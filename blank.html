@@ -18,9 +18,16 @@
       <div class="container">
         <div class="header-top">
           <!-- Logo -->
-          <a href="#">
-            <h1 class="logo">Maxmod</h1>
-          </a>
+          <div class="left-side">
+            <div class="burger-menu">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <a href="#">
+              <h1 class="logo">Maxmod</h1>
+            </a>
+          </div>
           <!-- Search -->
           <form class="search" id="search-form">
             <input placeholder="Search For Products..." type="text" />
@@ -86,22 +93,24 @@
                         alt=""
                       />
                     </a>
-                    <div class="product-detail">
-                      <a href="#">Lorem ipsum dolor sit amet consectetur.</a>
-                      <p>Weight: <span>500gm</span></p>
-                      <span class="price">$19.00</span>
-                    </div>
-                    <div class="cart-control">
-                      <button class="btn">
-                        <img
-                          src="./client/assets/icons/trashcan_icon.svg"
-                          alt=""
-                        />
-                      </button>
-                      <div class="count-control">
-                        <button class="decrease" id="decrease-btn">-</button>
-                        <input value="1" type="number" id="count-input" />
-                        <button class="increase" id="increase-btn">+</button>
+                    <div class="right-side">
+                      <div class="product-detail">
+                        <a href="#">Lorem ipsum dolor sit amet consectetur.</a>
+                        <p>Weight: <span>500gm</span></p>
+                        <span class="price">$19.00</span>
+                      </div>
+                      <div class="cart-control">
+                        <button class="btn">
+                          <img
+                            src="./client/assets/icons/trashcan_icon.svg"
+                            alt=""
+                          />
+                        </button>
+                        <div class="count-control">
+                          <button class="decrease" id="decrease-btn">-</button>
+                          <input value="1" type="number" id="count-input" />
+                          <button class="increase" id="increase-btn">+</button>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -125,7 +134,7 @@
         <div class="line out-of-container"></div>
         <div class="header-bottom">
           <nav>
-            <ul>
+            <ul class="navigation">
               <li class="active">
                 <a href="#">Home</a>
               </li>

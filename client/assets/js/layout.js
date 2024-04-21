@@ -18,11 +18,25 @@ const headerCategoriesDropdown = document.querySelector(
   ".header-bottom .categories .nav-dropdown"
 );
 
+const burgerMenuEl = document.querySelector(".burger-menu");
+const headerBottomEl = document.querySelector(".header-bottom");
+
+let windowWidth = window.innerWidth;
+
+//Toggles header navigation
+burgerMenuEl.addEventListener("click", () => {
+  burgerMenuEl.classList.toggle("open");
+  if (headerBottomEl.style.display == "")
+    headerBottomEl.style.display = "block";
+  else headerBottomEl.style.display = "";
+});
+
 //Toggle header categories dropdown
 headerCategoriesEl.addEventListener("click", (e) => {
   if (!e.target.closest(".nav-dropdown")) {
     headerCategoriesDropdown.classList.toggle("hidden");
-    headerCategoriesChevron.classList.toggle("inverted");
+    if (windowWidth > 1024)
+      headerCategoriesChevron.classList.toggle("inverted");
   }
 });
 
@@ -63,5 +77,11 @@ window.addEventListener("click", (e) => {
   ) {
     headerCategoriesDropdown.classList.add("hidden");
     headerCategoriesChevron.classList.remove("inverted");
+  }
+
+  //Closes header nav when clicked on empty space
+  if (!headerBottomEl.contains(clicked) && !clicked.closest(".burger-menu")) {
+    burgerMenuEl.classList.remove("open");
+    headerBottomEl.style.display = "";
   }
 });
