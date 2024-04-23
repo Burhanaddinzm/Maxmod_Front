@@ -1,0 +1,114 @@
+main .product-detail-section {
+  display: flex;
+  gap: 30px;
+}
+
+main .product-detail-section .left-side {
+  width: 55%;
+}
+
+main .product-detail-section .right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 45%;
+}
+
+main .product-detail-section .right-side .product-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+main .product-detail-section .right-side .price-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+main .product-detail-section .right-side .price-container .old-price {
+  font-size: 18px;
+  color: #505050;
+  text-decoration: line-through;
+}
+
+main .product-detail-section .right-side .in-stock {
+  color: #008a00;
+  position: relative;
+}
+
+main .product-detail-section .right-side .in-stock::before {
+  content: ".";
+  position: absolute;
+  font-size: 50px;
+  left: -3px;
+  top: -40px;
+}
+
+main .product-detail-section .right-side .out-of-stock {
+  color: #f00;
+  position: relative;
+}
+
+main .product-detail-section .right-side .out-of-stock::before {
+  content: ".";
+  position: absolute;
+  font-size: 50px;
+  left: -3px;
+  top: -40px;
+}
+
+main .product-detail-section .right-side .variation-name {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+main .product-detail-section .right-side .variation-name span {
+  font-weight: 300;
+}
+
+main .product-detail-section .right-side .variations {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: #000;
+}
+
+main .product-detail-section .right-side .variations > label {
+  padding: 4px 6px;
+  border-radius: 8px;
+  border: 1px solid #d4d4d4;
+  min-width: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+main .product-detail-section .right-side .variations > .active {
+  color: #fff;
+  background: #234925;
+}
+
+main .product-detail-section .right-side .quantity {
+  font-size: 16px;
+}
+
+main .product-detail-section .right-side .btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+main .product-detail-section .right-side .btn-wrapper .btn {
+  width: 48%;
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px 0;
+}
+
+main .product-detail-section .right-side .shipping-text {
+  text-align: center;
+  font-size: 14px;
+}

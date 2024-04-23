@@ -72,6 +72,9 @@ body {
   font-weight: 300;
   border-radius: 8px;
   padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 
 .out-of-stock-badge::before {
@@ -81,6 +84,9 @@ body {
   font-weight: 300;
   border-radius: 8px;
   padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 
 .save-badge::before {
@@ -91,6 +97,9 @@ body {
   font-weight: 300;
   border-radius: 8px;
   padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 
 .sale-badge::before {
@@ -101,6 +110,9 @@ body {
   font-weight: 300;
   border-radius: 8px;
   padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 
 .overlay {
@@ -488,7 +500,7 @@ header .left-side .burger-menu.open .bar:nth-child(3) {
   object-fit: contain;
 }
 
-.drawer-middle .product .cart-control .count-control {
+.count-control {
   display: flex;
   border: 1px solid #e1e1e1;
   border-radius: 8px;
@@ -496,7 +508,7 @@ header .left-side .burger-menu.open .bar:nth-child(3) {
   gap: 8px;
 }
 
-.product .cart-control .count-control input {
+.count-control input {
   width: 35px;
   height: 35px;
   text-align: center;
@@ -504,8 +516,8 @@ header .left-side .burger-menu.open .bar:nth-child(3) {
   outline-offset: 8px;
 }
 
-.product .cart-control .count-control .decrease,
-.product .cart-control .count-control .increase {
+.count-control .decrease,
+.count-control .increase {
   width: 35px;
   height: 35px;
   font-size: 18px;
