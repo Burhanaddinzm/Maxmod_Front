@@ -65,6 +65,44 @@ body {
   min-height: 100vh;
 }
 
+.new-badge::before {
+  content: "New";
+  background-color: #cdefdd;
+  font-size: 12px;
+  font-weight: 300;
+  border-radius: 8px;
+  padding: 2px 4px;
+}
+
+.out-of-stock-badge::before {
+  content: "Out of Stock";
+  background-color: #e89f9d;
+  font-size: 12px;
+  font-weight: 300;
+  border-radius: 8px;
+  padding: 2px 4px;
+}
+
+.save-badge::before {
+  content: "Save $" attr(data-dollar) " USD";
+  background-color: #57b15c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  border-radius: 8px;
+  padding: 2px 4px;
+}
+
+.sale-badge::before {
+  content: "Sale";
+  background-color: #57b15c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 8px;
+  padding: 2px 4px;
+}
+
 .overlay {
   width: 100vw;
   height: 100vh;
