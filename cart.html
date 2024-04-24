@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Style -->
     <link rel="stylesheet" href="./client/assets/css/layout.css" />
-    <link rel="stylesheet" href="./client/assets/css/product-detail.css" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -136,7 +135,7 @@
         <div class="header-bottom">
           <nav>
             <ul class="navigation">
-              <li>
+              <li class="active">
                 <a href="#">Home</a>
               </li>
               <li class="categories">
@@ -173,116 +172,7 @@
         <div class="line out-of-container"></div>
       </div>
     </header>
-    <main>
-      <div class="container">
-        <div class="breadcrumbs">
-          <span><a href="#">Home </a>>&nbsp;</span><span> @Model.Name</span>
-        </div>
-        <!-- Product Detail Start -->
-        <section class="product-detail-section">
-          <div class="left-side"></div>
-          <div class="right-side">
-            <h1 class="product-title">
-              Your Moments with Our Exquisite Dry Fruits Packing
-            </h1>
-            <div class="price-container">
-              <span class="selling-price">$19.00</span>
-              <span class="old-price">$21.00</span>
-              <span class="sale-badge"></span>
-            </div>
-            <div class="in-stock">&nbsp;&nbsp;&nbsp;In stock</div>
-            <div class="line"></div>
-            <div class="variation-name">Weight: <span>500gm</span></div>
-            <div class="variations">
-              <label for="variation-500gm" class="variation active"
-                >500gm</label
-              >
-              <input
-                selected
-                style="display: none"
-                type="radio"
-                id="variation-500gm"
-              />
-              <label for="variation-1kg" class="variation out">1kg</label>
-              <input
-                style="display: none"
-                type="radio"
-                id="variation-1kg"
-                disabled
-              />
-              <label for="variation-2kg" class="variation">2kg</label>
-              <input style="display: none" type="radio" id="variation-2kg" />
-            </div>
-            <div class="quantity">Quantity</div>
-            <div style="width: 139px" class="count-control">
-              <button class="decrease">-</button>
-              <input value="1" type="number" />
-              <button class="increase">+</button>
-            </div>
-            <div class="btn-wrapper">
-              <a class="btn" href="#">Add To Cart</a>
-              <a class="btn" href="#">Buy It Now</a>
-            </div>
-            <p class="shipping-text">Free standard shipping on $100+</p>
-            <div class="shop-principles">
-              <div>
-                <img src="./client/assets/icons/shiping_icon.svg" alt="" />
-                <span>Free Shiping</span>
-              </div>
-              <div>
-                <img src="./client/assets/icons/safe_payment_icon.svg" alt="" />
-                <span>Safe payment</span>
-              </div>
-              <div>
-                <img src="./client/assets/icons/free_returns_icon.svg" alt="" />
-                <span>Free returns</span>
-              </div>
-            </div>
-            <ul>
-              <li>
-                <span>Vendor:</span>
-                <p>Grocery Theme</p>
-              </li>
-              <li>
-                <span>Category:</span>
-                <p>Fruits</p>
-              </li>
-            </ul>
-            <h3>Description</h3>
-            <p class="product-description">
-              Made from the best quality food grade film Reusable: Durable
-              zipper could be used repeatedly without being damaged Made in
-              India Great for packing and storing goods, like nut-fruits, candy,
-              cookies, chocolate,tea leaf, seasoning, snacks, coffee beans,
-              herbs, tobacco, grain,jerky
-            </p>
-            <div class="shipping-return">
-              <div class="line"></div>
-              <button class="top">
-                <h4>Shipping And Return</h4>
-                <img src="./client/assets/icons/chevron.svg" alt="" />
-              </button>
-              <div class="bottom hidden">
-                <p>
-                  For all orders exceeding a value of 100USD shipping is offered
-                  for free.
-                </p>
-                <p>
-                  Returns will be accepted for up to 10 days of Customer's
-                  receipt or tracking number on unworn items. You, as a
-                  Customer, are obliged to inform us via email before you return
-                  the item.
-                </p>
-                <p>
-                  Otherwise, standard shipping charges apply. Check out our
-                  delivery&nbsp;Terms &amp; Conditions&nbsp;for more details.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+    <main><!-- @RenderBody --></main>
     <!-- Footer Start -->
     <footer>
       <div class="container">
@@ -359,6 +249,5 @@
     </footer>
     <!-- Scripts -->
     <script src="./client/assets/js/layout.js"></script>
-    <script src="./client/assets/js/product-detail.js"></script>
   </body>
 </html>

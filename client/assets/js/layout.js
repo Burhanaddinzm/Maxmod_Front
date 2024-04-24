@@ -40,6 +40,8 @@ burgerMenuEl.addEventListener("click", () => {
 
 //Toggle header categories dropdown
 headerCategoriesEl.addEventListener("click", (e) => {
+  e.preventDefault();
+  
   if (!e.target.closest(".nav-dropdown")) {
     headerCategoriesDropdown.classList.toggle("hidden");
     if (windowWidth > 1024)

@@ -4,8 +4,10 @@
 	Product				AppUser
 	Login/Register			Product
 	Cart				ProductImages
-	About				ProductSize
-	Contact				ProductWeight
-					Size
-					Weight
+	About				ProductWeight
+	Contact				Weight
 					Settings
+					Cart
+					Order					
+
+Price ve Count ProductWeight class-da qeyd olunacaq. Program.cs de "Default" weight-i yaranmalidir
