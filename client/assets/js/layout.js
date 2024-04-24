@@ -41,7 +41,7 @@ burgerMenuEl.addEventListener("click", () => {
 //Toggle header categories dropdown
 headerCategoriesEl.addEventListener("click", (e) => {
   e.preventDefault();
-  
+
   if (!e.target.closest(".nav-dropdown")) {
     headerCategoriesDropdown.classList.toggle("hidden");
     if (windowWidth > 1024)
@@ -133,10 +133,57 @@ window.addEventListener("scroll", () => {
   )}%, rgb(255, 255, 255) ${Math.round(scrollPercentage)}%)`;
 });
 
-// When the user clicks on the button, scroll to the top of the document
+// Scroll to the top of the document
 const scrollToTop = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
 
 backToTopBtn.addEventListener("click", scrollToTop);
+
+// Function to format number to two decimal points
+const formatToTwoDecimalPoints = (numStr) => {
+  if (typeof numStr === "string") {
+    const num = parseFloat(numStr.replace(/[^\d.-]/g, ""));
+    if (!isNaN(num)) {
+      return "$" + num.toFixed(2);
+    }
+  }
+  return numStr;
+};
+
+// Function to handle mutation changes
+const handleMutation = (mutationsList, observer) => {
+  mutationsList.forEach((mutation) => {
+    if (mutation.type === "characterData" || mutation.type === "childList") {
+      const target = mutation.target;
+      const formattedContent = formatToTwoDecimalPoints(target.textContent);
+      target.textContent = formattedContent;
+    }
+  });
+};
+
+// Target elements to observe change
+const headerCartTotalEl = document.querySelector(".header-cart-total");
+const cartDrawerSubTotalEl = document.querySelector(
+  ".cart-drawer .drawer-bottom .subtotal-container .subtotal"
+);
+const cartDrawerProductTotalEl = document.querySelector(
+  ".drawer-middle .product .product-detail .price"
+);
+
+// Options for the observer
+const config = { characterData: true, childList: true, subtree: true };
+
+// Create a new observer instance
+const observer = new MutationObserver(handleMutation);
+
+observer.observe(headerCartTotalEl, config);
+observer.observe(cartDrawerSubTotalEl, config);
+observer.observe(cartDrawerProductTotalEl, config);
+
+setTimeout(() => {
+  cartDrawerProductTotalEl.textContent = "22.249";
+  headerCartTotalEl.textContent = "22.249";
+  cartDrawerSubTotalEl.textContent = "22.249";
+}, 2000);
