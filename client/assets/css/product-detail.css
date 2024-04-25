@@ -193,3 +193,73 @@ main .product-detail-section .right-side .shipping-return .bottom {
 main .product-detail-section .right-side .shipping-return .bottom.open {
   max-height: 100%;
 }
+
+main .product-detail-section .left-side {
+  display: flex;
+  flex-direction: column;
+}
+
+main .product-detail-section .left-side .slider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+main .product-detail-section .left-side img {
+  border-radius: 8px;
+}
+
+main .product-detail-section .left-side img.active {
+  border: 2px solid #000;
+}
+
+main .product-detail-section .left-side .main-img {
+  width: 100%;
+  object-fit: contain;
+}
+
+main .product-detail-section .left-side .main-img.run-animation {
+  animation: mainImgAppear 0.7s;
+}
+
+@keyframes mainImgAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main .product-detail-section .left-side .slider .slide-container {
+  overflow: hidden;
+}
+
+main .product-detail-section .left-side .slider .img-container {
+  display: flex;
+  gap: 12px;
+  max-height: 170px;
+}
+
+main .product-detail-section .left-side .slider .img-container img {
+  width: calc(25% - 12px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+main .product-detail-section .left-side .slider .img-container img:hover {
+  opacity: 0.7;
+}
+
+main .product-detail-section .left-side .slider button img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+main .product-detail-section .left-side .slider .slider-back,
+main .product-detail-section .left-side .slider .mobile-back {
+  transform: rotate(180deg);
+}

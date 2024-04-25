@@ -181,9 +181,3 @@ const observer = new MutationObserver(handleMutation);
 observer.observe(headerCartTotalEl, config);
 observer.observe(cartDrawerSubTotalEl, config);
 observer.observe(cartDrawerProductTotalEl, config);
-
-setTimeout(() => {
-  cartDrawerProductTotalEl.textContent = "22.249";
-  headerCartTotalEl.textContent = "22.249";
-  cartDrawerSubTotalEl.textContent = "22.249";
-}, 2000);
