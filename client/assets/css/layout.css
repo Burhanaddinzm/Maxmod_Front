@@ -907,7 +907,7 @@ main .breadcrumbs a:hover {
 
 @media screen and (max-width: 768px) {
   main {
-    padding-bottom: 50px;
+    padding-bottom: 300px;
   }
 
   footer h3 {

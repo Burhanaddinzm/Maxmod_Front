@@ -48,8 +48,13 @@
 @media screen and (max-width: 768px) {
   .contact-section {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
     column-gap: 0;
     row-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    padding-bottom: 550px;
   }
 }

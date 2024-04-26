@@ -213,16 +213,28 @@
                     src="./client/assets/images/product/product-3.png"
                     alt=""
                   />
+                  <img
+                    src="./client/assets/images/product/product-2.png"
+                    alt=""
+                  />
+                  <img
+                    src="./client/assets/images/product/product-1.jpg"
+                    alt=""
+                  />
+                  <img
+                    src="./client/assets/images/product/product-3.png"
+                    alt=""
+                  />
                 </div>
               </div>
               <button class="slider-frwd">
                 <img src="./client/assets/icons/arrow_icon.svg" alt="" />
               </button>
-              <div style="display: none" class="mobile-slider">
+              <div class="mobile-slider">
                 <button class="mobile-back">
                   <img src="./client/assets/icons/arrow_icon.svg" alt="" />
                 </button>
-                <span class="slide-count">1 / of 6</span>
+                <span class="slide-count">1 / 6</span>
                 <button class="mobile-frwd">
                   <img src="./client/assets/icons/arrow_icon.svg" alt="" />
                 </button>
@@ -246,23 +258,30 @@
                 >500gm</label
               >
               <input
-                selected
+                checked="checked"
                 style="display: none"
                 type="radio"
                 id="variation-500gm"
+                name="variation"
               />
               <label for="variation-1kg" class="variation out">1kg</label>
               <input
                 style="display: none"
                 type="radio"
                 id="variation-1kg"
+                name="variation"
                 disabled
               />
               <label for="variation-2kg" class="variation">2kg</label>
-              <input style="display: none" type="radio" id="variation-2kg" />
+              <input
+                style="display: none"
+                type="radio"
+                id="variation-2kg"
+                name="variation"
+              />
             </div>
             <div class="quantity">Quantity</div>
-            <div style="width: 139px" class="count-control">
+            <div class="count-control">
               <button class="decrease">-</button>
               <input value="1" type="number" />
               <button class="increase">+</button>
