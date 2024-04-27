@@ -1,0 +1,255 @@
+main .cart-section {
+  display: flex;
+  gap: 30px;
+}
+
+main .cart-section .left-side {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+main .cart-section .left-side .page-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .cart-section .left-side .page-top h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+main .cart-section .left-side .page-top a {
+  font-size: 14px;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+
+main .cart-section .left-side .page-top a:hover {
+  color: #234925;
+}
+
+main .cart-section .left-side .products-container {
+  margin-top: 30px;
+}
+
+main .cart-section .left-side .products-container .top {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .cart-section .left-side .products-container .line {
+  margin: 16px 0;
+}
+
+main .cart-section .left-side .products-container .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main .cart-section .left-side .products-container .bottom .product {
+  display: flex;
+  gap: 20px;
+}
+
+main .cart-section .left-side .products-container .bottom .product img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+main .cart-section .left-side .products-container .bottom .product .right-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .wrapper
+  .remove-item-btn
+  img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .wrapper
+  .quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .wrapper
+  .product-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .total-price {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .wrapper
+  .product-detail
+  a {
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .wrapper
+  .product-detail
+  a:hover {
+  color: #234925;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .wrapper
+  .product-detail
+  .selling-price {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .wrapper
+  .product-detail
+  .old-price {
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .wrapper
+  .product-detail
+  p {
+  font-size: 14px;
+  color: #868686;
+}
+
+main
+  .cart-section
+  .left-side
+  .products-container
+  .bottom
+  .product
+  .right-side
+  .wrapper
+  .product-detail
+  p
+  span {
+  color: #000;
+}
+
+main .cart-section .checkout-container {
+  padding: 16px;
+  background-color: #f4f3f3;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main .cart-section .checkout-container .line {
+  background-color: #c8c8c8;
+  margin: 12px 0;
+}
+
+main .cart-section .checkout-container .subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+main .cart-section .checkout-container .subtotal span {
+  font-weight: 600;
+}
+
+main .cart-section .checkout-container .btn {
+  border-radius: 8px;
+  min-width: 100%;
+  padding: 8px;
+  text-align: center;
+}

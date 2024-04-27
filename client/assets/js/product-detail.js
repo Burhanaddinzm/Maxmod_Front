@@ -28,6 +28,25 @@ shippingAccordion.addEventListener("click", () => {
   setTimeout(() => {
     shippingAccordionText.classList.toggle("open");
   }, 1);
+
+  // Calculate hegith change due to accordion display property change. For backToTopBtn
+  const scrollPercentage = calculateScrollPercentage();
+
+  if (scrollPercentage >= 10) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+
+  if (scrollPercentage >= 50) {
+    backToTopBtn.classList.add("halfway");
+  } else {
+    backToTopBtn.classList.remove("halfway");
+  }
+
+  backToTopBtn.style.background = `linear-gradient(to top, rgb(0, 0, 0) ${Math.round(
+    scrollPercentage
+  )}%, rgb(255, 255, 255) ${Math.round(scrollPercentage)}%)`;
 });
 
 // Change variations
@@ -72,7 +91,7 @@ const moveSlide = (event) => {
     if (!slide.classList.contains("active")) slideWidth = slide.clientWidth;
   });
 
-  mobileSlideCount.textContent = `${sliderIndex + 1} / ${slideCount}`;
+  mobileSlideCount.textContent = `${sliderIndex + 1} / ${slideCount - 1}`;
 
   imgContainer.style.transform = `translateX(${-(
     slideWidth * sliderIndex +
@@ -80,7 +99,7 @@ const moveSlide = (event) => {
   )}px)`;
 };
 
-mobileSlideCount.textContent = `1 / ${slideCount}`;
+mobileSlideCount.textContent = `1 / ${slideCount - 1}`;
 
 backBtn.addEventListener("click", (event) => moveSlide(event));
 frwrdBtn.addEventListener("click", (event) => moveSlide(event));

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Style -->
     <link rel="stylesheet" href="./client/assets/css/layout.css" />
+    <link rel="stylesheet" href="./client/assets/css/cart.css" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -172,7 +173,77 @@
         <div class="line out-of-container"></div>
       </div>
     </header>
-    <main><!-- @RenderBody --></main>
+    <main>
+      <div class="container">
+        <div class="breadcrumbs">
+          <span><a href="#">Home </a>>&nbsp;</span
+          ><span> Your Shopping Cart</span>
+        </div>
+        <!-- Cart Start -->
+        <section class="cart-section">
+          <div class="left-side">
+            <div class="page-top">
+              <h2>Shopping cart</h2>
+              <a href="#">Continue shopping</a>
+            </div>
+            <div class="products-container">
+              <div class="top">
+                <span>Products</span>
+                <span>Quantity</span>
+                <span>Total</span>
+              </div>
+              <div class="line"></div>
+              <ul class="bottom">
+                <li class="product">
+                  <a href="#">
+                    <img
+                      src="./client/assets/images/product/product-1.jpg"
+                      alt=""
+                    />
+                  </a>
+                  <div class="right-side">
+                    <div class="wrapper">
+                      <div class="product-detail">
+                        <a href="#">Lorem ipsum dolor sit amet consectetur.</a>
+                        <div>
+                          <span class="selling-price">$19.00</span>
+                          <span class="old-price">$21.00</span>
+                        </div>
+                        <p>Weight: <span>500gm</span></p>
+                      </div>
+                      <div class="quantity">
+                        <div class="count-control">
+                          <button class="decrease">-</button>
+                          <input value="1" type="number" />
+                          <button class="increase">+</button>
+                        </div>
+
+                        <button class="remove-item-btn">
+                          <img
+                            src="./client/assets/icons/trashcan_2_icon.svg"
+                            alt=""
+                          />
+                        </button>
+                      </div>
+                    </div>
+
+                    <span class="total-price">$19.00</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="checkout-container">
+            <div class="subtotal">
+              <p>Subtotal(1)</p>
+              <span>$19.00</span>
+            </div>
+            <div class="line"></div>
+            <a href="#" class="btn"> Checkout </a>
+          </div>
+        </section>
+      </div>
+    </main>
     <!-- Footer Start -->
     <footer>
       <div class="container">
