@@ -53,6 +53,7 @@ headerCategoriesEl.addEventListener("click", (e) => {
 headerCartEl.addEventListener("click", () => {
   cartDrawerEl.classList.remove("hidden");
   cartOverlayEl.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
 });
 
 // Close drawer
@@ -60,6 +61,7 @@ headerCartEl.addEventListener("click", () => {
   element.addEventListener("click", () => {
     cartDrawerEl.classList.add("hidden");
     cartOverlayEl.classList.add("hidden");
+    document.body.style.overflow = "";
   });
 });
 
