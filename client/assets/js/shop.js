@@ -3,6 +3,9 @@
 const filterCategoriesBtn = document.querySelector(
   "main .shop-section .filter-categories-btn"
 );
+const filterCategoriesBtnChevron = document.querySelector(
+  "main .shop-section .filter-categories-btn img"
+);
 const filterCategoryBtns = document.querySelectorAll(
   "main .shop-section .category-btn"
 );
@@ -13,15 +16,35 @@ const filterSubcategoriesUls = document.querySelectorAll(
   "main .shop-section .filter-subcategories-ul"
 );
 
+const filterBtns = document.querySelectorAll(
+  "main .shop-section .filter-wrapper .filter-btn"
+);
+const filterUls = document.querySelectorAll(
+  "main .shop-section .filter-wrapper .filter-ul"
+);
+
 // Toggle categories
 filterCategoriesBtn.addEventListener("click", () => {
   toggleOpen(filterCategoriesUls);
+  filterCategoriesBtnChevron.classList.toggle("inverted");
+
+  filterSubcategoriesUls.forEach((ul) => {
+    ul.classList.add("hidden");
+    ul.classList.remove("open");
+  });
 });
 
 // Toggle subcategories
 filterCategoryBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     toggleOpen([filterSubcategoriesUls[index]]);
+  });
+});
+
+// Toggle filters
+filterBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    toggleOpen([filterUls[index]]);
   });
 });
 

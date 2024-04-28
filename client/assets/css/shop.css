@@ -1,10 +1,15 @@
 main .shop-section {
   display: flex;
+  gap: 30px;
   margin-top: 20px;
 }
 
 main .shop-section .filters {
   width: 20%;
+}
+
+main .shop-section .products {
+  width: 80%;
 }
 
 main .shop-section .filter-categories {
@@ -32,6 +37,7 @@ main .shop-section .filter-categories-btn img {
   width: 16px;
   height: 16px;
   object-fit: contain;
+  transition: transform 0.2s ease-in-out;
 }
 
 main .shop-section .filter-categories-ul {
@@ -81,5 +87,89 @@ main .shop-section .subcategory {
 }
 
 main .shop-section .filter-container {
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+main .shop-section .filter-container h3 {
+  font-size: 22px;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+main .shop-section .filter-wrapper .filter-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+main .shop-section .filter-wrapper .filter-btn img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+main .shop-section .filter-wrapper .line {
+  margin: 8px 0;
+}
+
+main .shop-section .filter-wrapper .filter-ul {
+  display: flex;
+  flex-direction: column;
+  max-height: 0%;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
+  padding-bottom: 8px;
+}
+
+main .shop-section .filter-wrapper .filter-ul *:hover {
+  color: #39743c;
+}
+
+main .shop-section .filter-wrapper .filter-ul.open {
+  max-height: 100%;
+}
+
+main .shop-section .filter-wrapper .filter-ul label {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+main .shop-section .filter-wrapper .filter-ul span {
+  font-size: 14px;
+}
+
+main .shop-section .filter-wrapper .filter-ul input {
+  accent-color: #000;
+}
+
+main .shop-section .products .page-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: end;
+}
+
+main .shop-section .products .page-top label {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+main .shop-section .products .page-top select {
+  padding: 8px 32px 8px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+main .shop-section .products .line {
+  margin: 16px 0;
+}
+
+main .shop-section .products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }

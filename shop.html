@@ -223,26 +223,76 @@
                 </li>
               </ul>
             </div>
-
             <div class="filter-container">
-              <div class="filter-wrapper open-filter">
+              <h3>Filter:</h3>
+              <div class="filter-wrapper">
                 <button class="filter-btn">
-                  AVAILABILITY
+                  Availability
                   <img src="./client/assets/icons/chevron.svg" alt="" />
                 </button>
                 <div class="line"></div>
-                <ul class="filter-ul">
+                <ul class="filter-ul open">
                   <li>
                     <label for="filter-instock">
                       <input type="checkbox" id="filter-instock" />
                       <span>In stock (6)</span>
                     </label>
                   </li>
+                  <li>
+                    <label for="filter-outofstock">
+                      <input type="checkbox" id="filter-outofstock" />
+                      <span>Out of stock (3)</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-wrapper">
+                <button class="filter-btn">
+                  Weight
+                  <img src="./client/assets/icons/chevron.svg" alt="" />
+                </button>
+                <div class="line"></div>
+                <ul class="filter-ul open">
+                  <li>
+                    <label for="filter-500gm">
+                      <input type="checkbox" id="filter-500gm" />
+                      <span>500gm</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label for="filter-1kg">
+                      <input type="checkbox" id="filter-1kg" />
+                      <span>1kg</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label for="filter-2kg">
+                      <input type="checkbox" id="filter-2kg" />
+                      <span>2kg</span>
+                    </label>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="products"></div>
+          <div class="products">
+            <div class="page-top">
+              <label for="sort-select">Sort by:</label>
+              <select name="sort" id="sort-select">
+                <option value="newest">Date, newest</option>
+                <option value="oldest">Date, oldest</option>
+                <option value="highest-price">Price, highest</option>
+                <option value="lowest-price">Price, lowest</option>
+              </select>
+            </div>
+            <div class="line"></div>
+            <div class="products-container">
+              <div class="product">product</div>
+              <div class="product">product</div>
+              <div class="product">product</div>
+            </div>
+            <div class="pagination"></div>
+          </div>
         </section>
         <!-- Shop Start -->
       </div>
