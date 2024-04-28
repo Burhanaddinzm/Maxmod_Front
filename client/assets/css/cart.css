@@ -370,7 +370,29 @@ main .cart-section .checkout-container .btn {
     .right-side
     .total-price {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
+  }
+  main
+    .cart-section
+    .left-side
+    .products-container
+    .bottom
+    .product
+    .right-side
+    .count-control {
+    padding: 4px;
+    gap: 4px;
+  }
+  main
+    .cart-section
+    .left-side
+    .products-container
+    .bottom
+    .product
+    .right-side
+    .count-control
+    input {
+    outline-offset: 4px;
   }
   main
     .cart-section
@@ -415,7 +437,7 @@ main .cart-section .checkout-container .btn {
     .bottom
     .product
     .right-side {
-    gap: 4px;
+    gap: 8px;
   }
 }
 

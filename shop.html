@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Style -->
     <link rel="stylesheet" href="./client/assets/css/layout.css" />
+    <link rel="stylesheet" href="./client/assets/css/shop.css" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -178,8 +179,69 @@
           <span><a href="#">Home </a>>&nbsp;</span
           ><span> @Model.Category.Name</span>
         </div>
+        <!-- Shop Start -->
         <section class="shop-section">
-          <div class="filters"></div>
+          <div class="filters">
+            <div class="filter-categories">
+              <button class="filter-categories-btn">
+                Categories
+                <img src="./client/assets/icons/chevron.svg" alt="" />
+              </button>
+              <ul class="filter-categories-ul hidden">
+                <li>
+                  <button class="category-btn">
+                    Fruits
+                    <img src="./client/assets/icons/chevron.svg" alt="" />
+                  </button>
+                  <ul class="filter-subcategories-ul hidden">
+                    <li>
+                      <button class="subcategory" data-subcategory="Apple">
+                        Apple
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="filter-categories-ul hidden">
+                <li>
+                  <button class="category-btn">
+                    Dairy
+                    <img src="./client/assets/icons/chevron.svg" alt="" />
+                  </button>
+                  <ul class="filter-subcategories-ul hidden">
+                    <li>
+                      <button class="subcategory" data-subcategory="Milk">
+                        Milk
+                      </button>
+                    </li>
+                    <li>
+                      <button class="subcategory" data-subcategory="Butter">
+                        Butter
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="filter-container">
+              <div class="filter-wrapper open-filter">
+                <button class="filter-btn">
+                  AVAILABILITY
+                  <img src="./client/assets/icons/chevron.svg" alt="" />
+                </button>
+                <div class="line"></div>
+                <ul class="filter-ul">
+                  <li>
+                    <label for="filter-instock">
+                      <input type="checkbox" id="filter-instock" />
+                      <span>In stock (6)</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <div class="products"></div>
         </section>
         <!-- Shop Start -->
@@ -261,5 +323,6 @@
     </footer>
     <!-- Scripts -->
     <script src="./client/assets/js/layout.js"></script>
+    <script src="./client/assets/js/shop.js"></script>
   </body>
 </html>

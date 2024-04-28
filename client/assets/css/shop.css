@@ -1,0 +1,85 @@
+main .shop-section {
+  display: flex;
+  margin-top: 20px;
+}
+
+main .shop-section .filters {
+  width: 20%;
+}
+
+main .shop-section .filter-categories {
+  border-radius: 8px;
+  border: 1px solid #f6f6f6;
+}
+
+main .shop-section .filter-categories *:hover {
+  color: #234925;
+}
+
+main .shop-section .filter-categories-btn {
+  background-color: #f6f6f6;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+main .shop-section .filter-categories-btn img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+main .shop-section .filter-categories-ul {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  max-height: 0%;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
+}
+
+main .shop-section .filter-categories-ul.open {
+  max-height: 100%;
+}
+
+main .shop-section .category-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+}
+
+main .shop-section .category-btn img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+main .shop-section .filter-subcategories-ul {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0 0 8px;
+  max-height: 0%;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
+}
+
+main .shop-section .filter-subcategories-ul.open {
+  max-height: 100%;
+}
+
+main .shop-section .subcategory {
+  width: 100%;
+  text-align: start;
+  font-size: 14px;
+}
+
+main .shop-section .filter-container {
+  margin-top: 50px;
+}
