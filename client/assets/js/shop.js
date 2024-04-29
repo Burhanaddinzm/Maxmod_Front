@@ -23,6 +23,8 @@ const filterUls = document.querySelectorAll(
   "main .shop-section .filter-wrapper .filter-ul"
 );
 
+const products = document.querySelectorAll(".product");
+
 // Toggle categories
 filterCategoriesBtn.addEventListener("click", () => {
   toggleOpen(filterCategoriesUls);
@@ -55,3 +57,23 @@ const toggleOpen = (elements) => {
     element.classList.toggle("open");
   });
 };
+
+// Change variation
+products.forEach((product) => {
+  const variants = product.querySelectorAll(".variations label");
+
+  variants.forEach((variant) => {
+    variant.addEventListener("click", () => {
+      if (variant.classList.contains("out")) return;
+
+      const activeVariants = product.querySelectorAll(
+        ".variations label.active"
+      );
+      activeVariants.forEach((label) => {
+        label.classList.remove("active");
+      });
+
+      variant.classList.add("active");
+    });
+  });
+});
