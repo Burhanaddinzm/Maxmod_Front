@@ -1,5 +1,9 @@
 "use strict";
 
+const filters = document.querySelector(".shop-section .filters");
+const filterSortBtn = document.querySelector(".shop-section .filter-sort");
+const shopOverlay = document.querySelector(".shop-section .overlay");
+
 const filterCategoriesBtn = document.querySelector(
   "main .shop-section .filter-categories-btn"
 );
@@ -24,6 +28,8 @@ const filterUls = document.querySelectorAll(
 );
 
 const products = document.querySelectorAll(".product");
+
+const disabledBtns = document.querySelectorAll(".pagination .disabled");
 
 // Toggle categories
 filterCategoriesBtn.addEventListener("click", () => {
@@ -77,3 +83,27 @@ products.forEach((product) => {
     });
   });
 });
+
+// Disable pagination prev or next buttons
+disabledBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+});
+
+// Open-close filter drawer on button click for responsive
+shopOverlay.classList.add("hidden");
+if (windowWidth <= 768) {
+  filters.classList.add("hidden");
+  filterSortBtn.addEventListener("click", () => {
+    filters.classList.remove("hidden");
+    shopOverlay.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  });
+
+  shopOverlay.addEventListener("click", () => {
+    filters.classList.add("hidden");
+    shopOverlay.classList.add("hidden");
+    document.body.style.overflow = "";
+  });
+}
