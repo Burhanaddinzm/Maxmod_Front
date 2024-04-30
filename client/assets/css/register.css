@@ -87,6 +87,8 @@ main .register-section h1 {
   .register-section .register-wrapper {
     width: 100%;
   }
+}
+@media screen and (max-width: 425px) {
   main {
     padding-bottom: 550px;
   }
