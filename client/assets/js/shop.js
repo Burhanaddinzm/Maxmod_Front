@@ -98,7 +98,23 @@ disabledBtns.forEach((btn) => {
 shopOverlay.classList.add("hidden");
 if (windowWidth <= 768) {
   filters.classList.add("hidden");
-} else filters.classList.remove("hidden");
+  filterSortBtn.addEventListener("click", () => {
+    filters.classList.remove("hidden");
+    shopOverlay.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  });
+
+  [shopOverlay, filterCloseBtn].forEach((el) => {
+    el.addEventListener("click", () => {
+      filters.classList.add("hidden");
+      shopOverlay.classList.add("hidden");
+      document.body.style.overflow = "";
+    });
+  });
+} else {
+  filters.classList.remove("hidden");
+  shopOverlay.classList.add("hidden");
+}
 
 window.addEventListener("resize", () => {
   if (windowWidth <= 768) {
