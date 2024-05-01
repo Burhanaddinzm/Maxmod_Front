@@ -1,3 +1,7 @@
+main section {
+  transition: all 0.3s ease-in-out;
+}
+
 main .introduction-section {
   position: relative;
   height: 500px;
@@ -123,7 +127,7 @@ main .slider-top .text h3 {
   display: flex;
   gap: 30px;
   text-align: center;
-  width: 3000px !important;
+  width: 3000px;
 }
 
 .shop-by-category-section .slide {
