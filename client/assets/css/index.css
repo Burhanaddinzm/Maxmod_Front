@@ -1,9 +1,6 @@
-main section {
+main section:not(:first-child) {
   transition: all 0.3s ease-in-out;
-}
-
-main section .slide-wrapper {
-  transition: transform 0.3s ease-in-out;
+  margin-top: 50px;
 }
 
 main .introduction-section {
@@ -79,18 +76,34 @@ main .slider-top .text h3 {
   margin-top: 8px;
 }
 
-.shop-by-category-section {
-  margin-top: 50px;
-}
-
-.shop-by-category-section .slider {
+.slider {
   display: flex;
   align-items: center;
   margin-top: 30px;
   position: relative;
+  width: 100%;
 }
 
-.shop-by-category-section .slider .btn {
+.slide-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 30px;
+  transition: transform 0.3s ease-in-out;
+  /* max-width: 100%; */
+  max-width: 93.7%;
+}
+
+.slide {
+  flex: 0 0 auto;
+}
+
+.slider .slider-back,
+.slider .slider-frwd {
   position: absolute;
   z-index: 1;
   display: flex;
@@ -100,22 +113,23 @@ main .slider-top .text h3 {
   border-radius: 8px;
 }
 
-.shop-by-category-section .slider .slider-back {
+.slider .slider-back {
   transform: rotate(180deg);
   top: 85px;
   left: -50px;
 }
 
-.shop-by-category-section .slider .slider-back::before {
+.slider .slider-back::before {
   transform-origin: top;
 }
 
-.shop-by-category-section .slider .slider-frwd {
+.slider .slider-frwd {
   top: 85px;
   right: -50px;
 }
 
-.shop-by-category-section .slider .btn img {
+.slider .slider-back img,
+.slider .slider-frwd img {
   width: 16px;
   height: 16px;
   object-fit: contain;
@@ -123,19 +137,10 @@ main .slider-top .text h3 {
     brightness(100%) contrast(100%);
 }
 
-.shop-by-category-section .slide-container {
-  overflow: hidden;
-}
-
-.shop-by-category-section .slide-wrapper {
-  display: flex;
-  gap: 30px;
-  text-align: center;
-  width: 3000px;
-}
-
 .shop-by-category-section .slide {
-  width: 7.16%;
+  /* width: 14.92%; */
+  width: 15.92%;
+  text-align: center;
 }
 
 .shop-by-category-section .slide a {
@@ -174,4 +179,169 @@ main .slider-top .text h3 {
   overflow: hidden;
   border-radius: 8px;
   display: flex;
+}
+
+.weeks-highligths-section .slider .slider-back {
+  top: 220px;
+}
+
+.weeks-highligths-section .slider .slider-frwd {
+  top: 220px;
+}
+
+.weeks-highligths-section .slide {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 25%;
+}
+
+.weeks-highligths-section .line {
+  margin: 16px 0;
+}
+
+.weeks-highligths-section .slide .top {
+  position: relative;
+  height: 280px;
+}
+
+.weeks-highligths-section .slide .badges {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+}
+
+.weeks-highligths-section .slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.weeks-highligths-section .slide .hover-img {
+  opacity: 0;
+}
+
+.weeks-highligths-section .slide .top:hover .-img {
+  opacity: 0;
+}
+
+.weeks-highligths-section .slide .top:hover .hover-img {
+  opacity: 1;
+}
+
+.weeks-highligths-section .slide .actions {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  justify-content: space-evenly;
+  width: 100%;
+  display: none;
+}
+
+.weeks-highligths-section .slide .actions .btn {
+  width: 45%;
+  text-align: center;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: #000;
+  font-weight: 400;
+  animation: btnAppear 0.3s;
+}
+
+.weeks-highligths-section .slide:hover .actions {
+  display: flex;
+}
+
+.weeks-highligths-section .slide .actions .btn::before {
+  background-color: #184434;
+}
+
+@keyframes btnAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weeks-highligths-section .slide .bottom {
+  padding: 10px 15px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.weeks-highligths-section .slide .bottom .line {
+  margin: 8px 0;
+}
+
+.weeks-highligths-section .slide .bottom h6 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.weeks-highligths-section .slide .bottom a {
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+  margin-top: 5px;
+}
+
+.weeks-highligths-section .slide .bottom a:hover {
+  color: #23634c;
+}
+
+.weeks-highligths-section .slide .bottom .price-wrapper {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.weeks-highligths-section .slide .bottom .price-wrapper .old-price {
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.weeks-highligths-section .slide .bottom h5 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.weeks-highligths-section .slide .bottom .variations {
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.weeks-highligths-section .slide .bottom .variations > label {
+  padding: 4px 6px;
+  border-radius: 8px;
+  border: 1px solid #d4d4d4;
+  min-width: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.weeks-highligths-section .slide .bottom .variations > .active {
+  color: #fff;
+  background: #000000;
+}
+
+.weeks-highligths-section .slide .bottom .variations > .out {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
