@@ -2,6 +2,10 @@ main section {
   transition: all 0.3s ease-in-out;
 }
 
+main section .slide-wrapper {
+  transition: transform 0.3s ease-in-out;
+}
+
 main .introduction-section {
   position: relative;
   height: 500px;
