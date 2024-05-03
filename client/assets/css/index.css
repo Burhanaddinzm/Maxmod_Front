@@ -345,3 +345,34 @@ main .slider-top .text h3 {
   text-decoration: line-through;
   opacity: 0.5;
 }
+
+.organic-fresh-section .container {
+  display: flex;
+  gap: 30px;
+}
+
+.organic-fresh-section img {
+  width: 50%;
+  border-radius: 8px;
+}
+
+.organic-fresh-section .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.organic-fresh-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.organic-fresh-section h2 span {
+  font-weight: 400;
+}
+
+.organic-fresh-section p {
+  font-size: 14px;
+  line-height: 30px;
+}

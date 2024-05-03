@@ -29,7 +29,7 @@ const scrollAnimation = () => {
   sections.forEach((section) => {
     if (section.classList.contains("introduction-section")) return;
 
-    const triggerPoint = window.innerHeight * 0.8;
+    const triggerPoint = window.innerHeight * 0.9;
     const distanceFromTop = section.getBoundingClientRect().top;
 
     if (distanceFromTop < triggerPoint) {
