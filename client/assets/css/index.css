@@ -172,7 +172,7 @@ main .slider-top .text h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: scale 0.2s ease-in-out;
+  transition: scale 0.4s ease-in-out;
 }
 
 .shop-by-category-section .slide .img-container {
@@ -375,4 +375,124 @@ main .slider-top .text h3 {
 .organic-fresh-section p {
   font-size: 14px;
   line-height: 30px;
+}
+
+.small-promos-section .container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 230px;
+}
+
+.small-promos-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  border-radius: 8px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.small-promos-section img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.4s ease-in-out;
+  filter: opacity(75%);
+}
+
+.small-promos-section .wrapper:hover > img {
+  scale: 1.05;
+}
+
+.small-promos-section .wrapper h5 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.small-promos-section .wrapper h4 {
+  font-size: 18px;
+  width: 70%;
+  font-weight: 500;
+}
+
+.small-promos-section .wrapper p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.small-promos-section .wrapper a {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+  width: fit-content;
+}
+
+.small-promos-section .wrapper a:hover {
+  color: #234925;
+}
+
+.delivery-info-section {
+  background-color: #e8eceb;
+  width: 100%;
+}
+
+.delivery-info-section .container {
+  display: flex;
+  gap: 50px;
+  padding: 30px 0;
+}
+
+.delivery-info-section .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.delivery-info-section .img-wrapper {
+  border-radius: 9999px;
+  padding: 12px;
+  background-color: #174534;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delivery-info-section .img-wrapper img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+.delivery-info-section .wrapper:first-child img {
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(308deg)
+    brightness(110%) contrast(101%);
+}
+
+.delivery-info-section .text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-info-section .text-wrapper h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.delivery-info-section .text-wrapper p {
+  font-size: 14px;
+}
+
+.delivery-info-section .wrapper:hover img {
+  transform: rotateY(180deg);
 }
