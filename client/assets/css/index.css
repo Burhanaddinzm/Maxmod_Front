@@ -346,33 +346,33 @@ main .slider-top .text h3 {
   opacity: 0.5;
 }
 
-.organic-fresh-section .container {
+.promo-section .container {
   display: flex;
   gap: 30px;
 }
 
-.organic-fresh-section img {
+.promo-section img {
   width: 50%;
   border-radius: 8px;
 }
 
-.organic-fresh-section .text-container {
+.promo-section .text-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 30px;
 }
 
-.organic-fresh-section h2 {
+.promo-section h2 {
   font-size: 40px;
   font-weight: 700;
 }
 
-.organic-fresh-section h2 span {
+.promo-section h2 span {
   font-weight: 400;
 }
 
-.organic-fresh-section p {
+.promo-section p {
   font-size: 14px;
   line-height: 30px;
 }
@@ -495,4 +495,100 @@ main .slider-top .text h3 {
 
 .delivery-info-section .wrapper:hover img {
   transform: rotateY(180deg);
+}
+
+.scrolling-text-section {
+  width: 100%;
+  background-color: #eff2ef;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.scrolling-text-section .scroll {
+  white-space: nowrap;
+  display: flex;
+  cursor: pointer;
+}
+
+.scrolling-text-section .scroll > div {
+  display: flex;
+  gap: 56px;
+}
+
+.scrolling-text-section .scroll p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.right-to-left {
+  animation: RightToLeft 26s infinite linear;
+}
+
+.scrolling-text-section:hover .right-to-left {
+  animation-play-state: paused;
+}
+
+@keyframes RightToLeft {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(calc(-100% - 56px));
+  }
+}
+
+.big-promo-section .container {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  overflow: hidden;
+  border-radius: 12px;
+  min-height: 500px;
+}
+
+.big-promo-section .container img {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.big-promo-section .container h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.big-promo-section .container h2 {
+  width: 40%;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.big-promo-section .container p {
+  font-size: 14px;
+}
+
+.big-promo-section .container a {
+  display: block;
+  width: 130px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+  color: #000;
+  background-color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+
+.big-promo-section .container a:hover {
+  color: #fff;
 }
