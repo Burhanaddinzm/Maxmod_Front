@@ -48,6 +48,7 @@ window.addEventListener("scroll", scrollAnimation);
 sections.forEach((section, index) => {
   const slider = section.querySelector(".slider");
   if (!slider) return;
+  if (section.classList.contains("vendor-section")) return;
   const slideCount = slider.querySelectorAll(".slide").length;
   const slideWrapper = slider.querySelector(".slide-wrapper");
   const slides = slider.querySelectorAll(".slide");
@@ -163,3 +164,47 @@ const moveSlide = (
   // Update the sliderIndex for the current section
   sections[sectionIndex].dataset.sliderIndex = sliderIndex;
 };
+
+// Vendor slider
+const vendorSlides = document.querySelectorAll(".vendor-section .slide");
+const vendorSlideWrapper = document.querySelector(
+  ".vendor-section .slide-wrapper"
+);
+
+// Set initial slide index and direction
+let currentSlideIndex = 0;
+let direction = 1; // 1 for forward, -1 for backward
+
+const moveVendorSlides = () => {
+  let slideWidth = vendorSlides[0].clientWidth;
+
+  vendorSlideWrapper.style.transform = `translateX(${-(
+    slideWidth * currentSlideIndex +
+    110 * currentSlideIndex
+  )}px)`;
+
+  // Update current slide index based on direction
+  currentSlideIndex += direction;
+
+  // Check if reached the end or beginning of slides
+  if (currentSlideIndex == vendorSlides.length - 6) {
+    currentSlideIndex = vendorSlides.length - 7;
+    direction = -1;
+  } else if (currentSlideIndex < 0) {
+    currentSlideIndex = 1;
+    direction = 1;
+  }
+};
+
+// Start the interval
+let intervalId = setInterval(moveVendorSlides, 3000);
+
+// Stop the interval when the mouse hovers over the slider
+vendorSlideWrapper.addEventListener("mouseenter", () => {
+  clearInterval(intervalId);
+});
+
+// Resume the interval when the mouse leaves the slider
+vendorSlideWrapper.addEventListener("mouseleave", () => {
+  intervalId = setInterval(moveVendorSlides, 3000);
+});
