@@ -89,7 +89,7 @@ sections.forEach((section, index) => {
           index
         )
       );
-    } else if (windowWidth <= 1024) {
+    } else if (windowWidth <= 1024 && windowWidth > 768) {
       if (slideCount <= 3) {
         backBtn.classList.add("hidden");
         frwrdBtn.classList.add("hidden");
@@ -114,6 +114,39 @@ sections.forEach((section, index) => {
           event,
           30,
           3,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+    } else if (windowWidth <= 768) {
+      if (slideCount <= 2) {
+        backBtn.classList.add("hidden");
+        frwrdBtn.classList.add("hidden");
+        return;
+      }
+
+      backBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          20,
+          2,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+      frwrdBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          20,
+          2,
           slideCount,
           slideWrapper,
           slides,
@@ -159,7 +192,7 @@ sections.forEach((section, index) => {
           index
         )
       );
-    } else if (windowWidth <= 1024) {
+    } else if (windowWidth <= 1024 && windowWidth > 768) {
       if (slideCount <= 3) {
         backBtn.classList.add("hidden");
         frwrdBtn.classList.add("hidden");
@@ -184,6 +217,39 @@ sections.forEach((section, index) => {
           event,
           30,
           3,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+    } else if (windowWidth <= 768) {
+      if (slideCount <= 1) {
+        backBtn.classList.add("hidden");
+        frwrdBtn.classList.add("hidden");
+        return;
+      }
+
+      backBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          20,
+          1,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+      frwrdBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          20,
+          1,
           slideCount,
           slideWrapper,
           slides,
@@ -265,7 +331,7 @@ const moveVendorSlides = () => {
       slideWidth * currentSlideIndex +
       110 * currentSlideIndex
     )}px)`;
-  } else if (windowWidth <= 1024) {
+  } else if (windowWidth <= 1024 && windowWidth > 768) {
     if (currentSlideIndex == vendorSlides.length - 3) {
       currentSlideIndex = vendorSlides.length - 5;
       direction = -1;
@@ -277,6 +343,19 @@ const moveVendorSlides = () => {
     vendorSlideWrapper.style.transform = `translateX(${-(
       slideWidth * currentSlideIndex +
       110 * currentSlideIndex
+    )}px)`;
+  } else if (windowWidth <= 425) {
+    if (currentSlideIndex == vendorSlides.length - 2) {
+      currentSlideIndex = vendorSlides.length - 4;
+      direction = -1;
+    } else if (currentSlideIndex < 0) {
+      currentSlideIndex = 1;
+      direction = 1;
+    }
+
+    vendorSlideWrapper.style.transform = `translateX(${-(
+      slideWidth * currentSlideIndex +
+      112 * currentSlideIndex
     )}px)`;
   }
 };

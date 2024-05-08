@@ -613,7 +613,7 @@ main .slider-top .text h3 {
   }
 
   main .slider-top .btn {
-    padding: 4px 24px;
+    font-size: 14px;
   }
 
   main .slider-top .text h2 {
@@ -740,5 +740,126 @@ main .slider-top .text h3 {
 
   .vendor-section .slide {
     width: 11.5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .introduction-section > div {
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .introduction-section h1 {
+    font-size: 18px;
+    width: 100%;
+  }
+  .introduction-section p {
+    width: 100%;
+    font-size: 12px;
+  }
+  .introduction-section .btn {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  main .slider-top {
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+  }
+  main .slider-top .text h2 {
+    font-size: 18px;
+  }
+  main .slider-top .text h3 {
+    font-size: 14px;
+  }
+
+  .slide-wrapper {
+    gap: 20px;
+  }
+  .shop-by-category-section .slide {
+    width: 51.86%;
+  }
+  .weeks-highligths-section .slide {
+    width: 106.6%;
+  }
+  .weeks-highligths-section .slide .top {
+    height: 400px;
+  }
+
+  .promo-section .container {
+    flex-direction: column;
+  }
+  .promo-section img {
+    width: 100%;
+  }
+
+  .small-promos-section .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .small-promos-section .wrapper {
+    height: 50vh;
+  }
+  .small-promos-section .wrapper h5,
+  .small-promos-section .wrapper h4,
+  .small-promos-section .wrapper p,
+  .small-promos-section .wrapper a {
+    width: 70%;
+    text-align: center;
+  }
+
+  .delivery-info-section .container {
+    padding: 20px 40px;
+    gap: 20px;
+  }
+  .delivery-info-section .wrapper {
+    width: 40%;
+    max-width: 100%;
+  }
+
+  .big-promo-section .container h2 {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .big-promo-section .container a {
+    font-size: 14px;
+  }
+
+  .vendor-section .slide {
+    margin: 0 45px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .small-promos-section .wrapper {
+    height: 30vh;
+  }
+  .small-promos-section .wrapper h5,
+  .small-promos-section .wrapper h4,
+  .small-promos-section .wrapper p,
+  .small-promos-section .wrapper a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .shop-by-category-section .slide {
+    width: 50.4%;
+  }
+
+  .weeks-highligths-section .slide .top {
+    height: 300px;
+  }
+
+  .delivery-info-section .container {
+    padding: 20px 0;
+  }
+  .delivery-info-section .wrapper {
+    width: 100%;
+  }
+
+  main {
+    padding-bottom: 550px;
   }
 }
