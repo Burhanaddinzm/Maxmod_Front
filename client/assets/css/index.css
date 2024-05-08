@@ -114,8 +114,8 @@ main .slider-top .text h3 {
 }
 
 .slider .slider-back {
-  transform: rotate(180deg);
-  top: 85px;
+  transform: rotate(180deg) translateY(100%);
+  top: 50%;
   left: -50px;
 }
 
@@ -124,7 +124,8 @@ main .slider-top .text h3 {
 }
 
 .slider .slider-frwd {
-  top: 85px;
+  transform: translateY(-100%);
+  top: 50%;
   right: -50px;
 }
 
@@ -179,14 +180,6 @@ main .slider-top .text h3 {
   overflow: hidden;
   border-radius: 8px;
   display: flex;
-}
-
-.weeks-highligths-section .slider .slider-back {
-  top: 220px;
-}
-
-.weeks-highligths-section .slider .slider-frwd {
-  top: 220px;
 }
 
 .weeks-highligths-section .slide {
@@ -521,7 +514,7 @@ main .slider-top .text h3 {
 }
 
 .right-to-left {
-  animation: RightToLeft 26s infinite linear;
+  animation: RightToLeft 60s infinite linear;
 }
 
 .scrolling-text-section:hover .right-to-left {
@@ -548,7 +541,7 @@ main .slider-top .text h3 {
   gap: 30px;
   overflow: hidden;
   border-radius: 12px;
-  min-height: 500px;
+  height: 500px;
 }
 
 .big-promo-section .container img {
@@ -596,4 +589,156 @@ main .slider-top .text h3 {
 .vendor-section .slide {
   margin: 0 50px;
   width: 5.94%;
+}
+
+@media screen and (max-width: 1024px) {
+  main section:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  main .introduction-section {
+    height: 300px;
+  }
+
+  .introduction-section > div {
+    gap: 25px;
+  }
+
+  .introduction-section h1 {
+    font-size: 22px;
+  }
+
+  .introduction-section p {
+    font-size: 14px;
+  }
+
+  main .slider-top .btn {
+    padding: 4px 24px;
+  }
+
+  main .slider-top .text h2 {
+    font-size: 22px;
+  }
+
+  main .slider-top .text h3 {
+    font-size: 16px;
+  }
+
+  .slide-wrapper {
+    gap: 30px;
+  }
+
+  .slider .slider-back {
+    left: 0;
+  }
+
+  .slider .slider-frwd {
+    right: 0;
+  }
+
+  .shop-by-category-section .slide {
+    width: 33.5%;
+  }
+
+  .weeks-highligths-section .slide {
+    width: 33.4%;
+  }
+
+  .scrolling-text-section {
+    padding: 4px 0;
+  }
+
+  .scrolling-text-section .scroll p {
+    font-size: 14px;
+  }
+
+  .promo-section .text-container {
+    gap: 20px;
+  }
+
+  .promo-section h2 {
+    font-size: 24px;
+  }
+
+  .promo-section p {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .small-promos-section .container {
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 144px;
+  }
+
+  .small-promos-section .wrapper {
+    gap: 4px;
+  }
+
+  .small-promos-section .wrapper h5 {
+    font-size: 12px;
+  }
+
+  .small-promos-section .wrapper h4 {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .small-promos-section .wrapper p {
+    font-size: 12px;
+  }
+
+  .small-promos-section .wrapper a {
+    font-size: 12px;
+  }
+
+  .delivery-info-section .container {
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+
+  .delivery-info-section .wrapper {
+    gap: 12px;
+    width: calc(33.33% - 30px * 2 / 3);
+  }
+
+  .delivery-info-section .img-wrapper {
+    padding: 10px;
+  }
+
+  .delivery-info-section .img-wrapper img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .delivery-info-section .text-wrapper h3 {
+    font-size: 16px;
+  }
+
+  .delivery-info-section .text-wrapper p {
+    font-size: 12px;
+  }
+
+  .big-promo-section .container {
+    gap: 20px;
+    height: 300px;
+  }
+
+  .big-promo-section .container h3 {
+    font-size: 16px;
+  }
+
+  .big-promo-section .container h2 {
+    width: 60%;
+    font-size: 24px;
+  }
+
+  .big-promo-section .container p {
+    font-size: 14px;
+  }
+
+  .vendor-section .slide {
+    width: 11.5%;
+  }
 }

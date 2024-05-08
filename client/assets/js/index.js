@@ -56,73 +56,143 @@ sections.forEach((section, index) => {
   const frwrdBtn = slider.querySelector(".slider-frwd");
 
   if (section.classList.contains("shop-by-category-section")) {
-    if (slideCount <= 6) {
-      backBtn.classList.add("hidden");
-      frwrdBtn.classList.add("hidden");
-      return;
-    }
+    if (windowWidth > 1024) {
+      if (slideCount <= 6) {
+        backBtn.classList.add("hidden");
+        frwrdBtn.classList.add("hidden");
+        return;
+      }
 
-    backBtn.addEventListener("click", (event) =>
-      moveSlide(
-        event,
-        30,
-        6,
-        slideCount,
-        slideWrapper,
-        slides,
-        backBtn,
-        frwrdBtn,
-        index
-      )
-    );
-    frwrdBtn.addEventListener("click", (event) =>
-      moveSlide(
-        event,
-        30,
-        6,
-        slideCount,
-        slideWrapper,
-        slides,
-        backBtn,
-        frwrdBtn,
-        index
-      )
-    );
+      backBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          30,
+          6,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+      frwrdBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          30,
+          6,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+    } else if (windowWidth <= 1024) {
+      if (slideCount <= 3) {
+        backBtn.classList.add("hidden");
+        frwrdBtn.classList.add("hidden");
+        return;
+      }
+
+      backBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          30,
+          3,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+      frwrdBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          30,
+          3,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+    }
   }
 
   if (section.classList.contains("weeks-highligths-section")) {
-    if (slideCount <= 4) {
-      backBtn.classList.add("hidden");
-      frwrdBtn.classList.add("hidden");
-      return;
-    }
+    if (windowWidth > 1024) {
+      if (slideCount <= 4) {
+        backBtn.classList.add("hidden");
+        frwrdBtn.classList.add("hidden");
+        return;
+      }
 
-    backBtn.addEventListener("click", (event) =>
-      moveSlide(
-        event,
-        30,
-        4,
-        slideCount,
-        slideWrapper,
-        slides,
-        backBtn,
-        frwrdBtn,
-        index
-      )
-    );
-    frwrdBtn.addEventListener("click", (event) =>
-      moveSlide(
-        event,
-        30,
-        4,
-        slideCount,
-        slideWrapper,
-        slides,
-        backBtn,
-        frwrdBtn,
-        index
-      )
-    );
+      backBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          30,
+          4,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+      frwrdBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          30,
+          4,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+    } else if (windowWidth <= 1024) {
+      if (slideCount <= 3) {
+        backBtn.classList.add("hidden");
+        frwrdBtn.classList.add("hidden");
+        return;
+      }
+
+      backBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          30,
+          3,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+      frwrdBtn.addEventListener("click", (event) =>
+        moveSlide(
+          event,
+          30,
+          3,
+          slideCount,
+          slideWrapper,
+          slides,
+          backBtn,
+          frwrdBtn,
+          index
+        )
+      );
+    }
   }
 });
 
@@ -171,32 +241,46 @@ const vendorSlideWrapper = document.querySelector(
   ".vendor-section .slide-wrapper"
 );
 
-// Set initial slide index and direction
+// Set initial slide index and direction. 1 for forward, -1 for backward
 let currentSlideIndex = 0;
-let direction = 1; // 1 for forward, -1 for backward
+let direction = 1;
 
 const moveVendorSlides = () => {
   let slideWidth = vendorSlides[0].clientWidth;
-
-  vendorSlideWrapper.style.transform = `translateX(${-(
-    slideWidth * currentSlideIndex +
-    110 * currentSlideIndex
-  )}px)`;
 
   // Update current slide index based on direction
   currentSlideIndex += direction;
 
   // Check if reached the end or beginning of slides
-  if (currentSlideIndex == vendorSlides.length - 6) {
-    currentSlideIndex = vendorSlides.length - 7;
-    direction = -1;
-  } else if (currentSlideIndex < 0) {
-    currentSlideIndex = 1;
-    direction = 1;
+  if (windowWidth > 1024) {
+    if (currentSlideIndex == vendorSlides.length - 6) {
+      currentSlideIndex = vendorSlides.length - 8;
+      direction = -1;
+    } else if (currentSlideIndex < 0) {
+      currentSlideIndex = 1;
+      direction = 1;
+    }
+
+    vendorSlideWrapper.style.transform = `translateX(${-(
+      slideWidth * currentSlideIndex +
+      110 * currentSlideIndex
+    )}px)`;
+  } else if (windowWidth <= 1024) {
+    if (currentSlideIndex == vendorSlides.length - 3) {
+      currentSlideIndex = vendorSlides.length - 5;
+      direction = -1;
+    } else if (currentSlideIndex < 0) {
+      currentSlideIndex = 1;
+      direction = 1;
+    }
+
+    vendorSlideWrapper.style.transform = `translateX(${-(
+      slideWidth * currentSlideIndex +
+      110 * currentSlideIndex
+    )}px)`;
   }
 };
 
-// Start the interval
 let intervalId = setInterval(moveVendorSlides, 3000);
 
 // Stop the interval when the mouse hovers over the slider
